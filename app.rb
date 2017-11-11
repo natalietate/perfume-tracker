@@ -14,6 +14,8 @@ get '/' do
 end
 
 get '/collection' do
+  @user = User.find_by_id(session[:user_id])
+  @perfumes = Collection.all
   erb :collection
 end
 
