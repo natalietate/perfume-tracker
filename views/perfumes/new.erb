@@ -1,0 +1,14 @@
+<h1> perfumes/new </h1>
+
+<form action="/collection/<%= @user.id %>" method="post">
+  <label for="perfume_name">Perfume Name:</label>
+  <input type="text" name="perfume_name">
+
+  <br><br>
+  <label for="perfunme_maker">Perfume Maker:</label>
+  <input type="text" name="perfunme_maker">
+  <br>
+  <br>
+
+  <input type="submit" value="Create">
+</form>
