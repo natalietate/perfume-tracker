@@ -15,7 +15,8 @@ end
 
 get '/collection' do
   @user = User.find_by_id(session[:user_id])
-  @perfumes = Collection.all
+  @currentuser = @user.id
+  @perfumes = Collection.where(user_id: @currentuser)
   erb :collection
 end
 
