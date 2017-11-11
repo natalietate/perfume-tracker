@@ -24,6 +24,11 @@ get '/perfumes/new' do
   erb :'perfumes/new'
 end
 
+get '/logout' do
+  session.clear
+  redirect '/'
+end
+
 post '/collection/:id' do
   @user = User.find_by_id(session[:user_id])
   @user.collections.create(perfume_name: params[:perfume_name], perfunme_maker: params[:perfunme_maker])
